@@ -14,6 +14,7 @@ resource "aws_instance" "web_server" {
     Name = "${var.pj_name}-ec2"
   }
 
+  # Nginx
   user_data = <<-EOF
                 #!/bin/bash
                 sudo yum update -y
